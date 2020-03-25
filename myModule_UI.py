@@ -1,9 +1,16 @@
+#This Module contains Python functions to support Recommender System's UI interaction
+
 import pandas as pd
 import numpy as np
 
-#array to hold interactive user's rating responses before giving recomendations
-#required parameters:
-#         cols - number for columns needed for user-item matrix
+"""
+Purpose:
+   - Returns an empty Array of shape (1 Row, cols Columns)
+   - Columns size matches item (movie) counts in item data set; extracted at runtime
+   - Returned array is used to capture ratings input by user for each randomly selected item
+Param:
+   - @cols: number of items available for ratings; captured programatically at runtime
+"""
 def newUser(cols):
     userProfile = np.zeros((1,cols))
     return userProfile
